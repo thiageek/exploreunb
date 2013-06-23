@@ -59,30 +59,59 @@
 		function initialize() {
 
 			var featureOpts = [{
+				featureType : 'poi.school',
+				elementType : 'all',
 				stylers : [{
 					hue : '#009200'
 				}, {
+					saturation : 100
+				}, {
+					lightness : -66
+				}, {
+					visibility : 'on'
+				}]
+			}, {
+				featureType : 'landscape',
+				elementType : 'all',
+				stylers : [{
+					hue : '#001fce'
+				}, {
+					saturation : 100
+				}, {
+					lightness : -55
+				}, {
+					visibility : 'on'
+				}]
+			}, {
+				featureType : 'road',
+				elementType : 'all',
+				stylers : [{
+					hue : '#ffffff'
+				}, {
+					saturation : -100
+				}, {
+					lightness : 100
+				}, {
 					visibility : 'simplified'
-				}, {
-					gamma : 0.2
-				}, {
-					weight : 0.8
-				}]
+				},
+				{ weight: 0.5 }]
 			}, {
-				elementType : 'labels',
+				featureType : 'poi.business',
+				elementType : 'all',
 				stylers : [{
+					hue : '#001fce'
+				}, {
+					saturation : 100
+				}, {
+					lightness : -52
+				}, {
 					visibility : 'off'
-				}]
-			}, {
-				featureType : 'water',
-				stylers : [{
-					color : '#001FCE'
 				}]
 			}];
 
 			var mapOptions = {
 				zoom : 15,
-				center : new google.maps.LatLng(-15.763138, -47.869066),
+				center : new google.maps.LatLng(-15.763, -47.865066),
 				disableDefaultUI : true,
 				mapTypeControlOptions : {
 					mapTypeIds : [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
