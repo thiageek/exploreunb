@@ -2,7 +2,7 @@ AddDefaultCharset UTF-8
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-  	# my url is www.thiageek.com.br/projetos/exploreunb
+  	# my url is http://localhost/exploreunb
     #RewriteBase /exploreunb/
 	# set your own
 	RewriteBase /exploreunb/

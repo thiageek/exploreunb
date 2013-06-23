@@ -15,7 +15,6 @@
 |
 */
 $config['base_url']	= 'http://localhost/exploreunb/';
-
 /*
 |--------------------------------------------------------------------------
 | Content Delivery Network URL
