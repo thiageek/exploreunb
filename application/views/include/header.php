@@ -13,6 +13,16 @@
    <link href="<?php echo base_url('assets/css/bootstrap-responsive.min.css') ?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/font-awesome.css') ?>" rel="stylesheet">
    <link href="<?php echo base_url('assets/css/custom.css') ?>" rel="stylesheet">
+   <style>
+   	@font-face {
+	font-family: 'code_bold';
+	src: url('<?php echo base_url('assets/font/CODE Bold.otf') ?>');
+}
+   	@font-face {
+	font-family: 'prime';
+	src: url('<?php echo base_url('assets/font/Prime Regular.otf') ?>');
+}
+   </style>
 
    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>

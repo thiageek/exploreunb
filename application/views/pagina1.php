@@ -3,21 +3,25 @@
 		<h1>O QUE VOCÊ <span>PROCURA</span> ?</h1>
 		<div id="div_form_busca">
 			<form id="form_busca">
-				<input type="text" name="busca" id="campo_busca" style="background-image: url('<?php echo base_url('assets/img/barra_pesquisa.jpg') ?>')"/>
+				<input type="text" name="busca" id="campo_busca" placeholder="Salas, Onibus, Lanchonetes ..." style="background-image: url('<?php echo base_url('assets/img/barra_pesquisa.jpg') ?>')"/>
+				<input type="hidden" name="opcao" value="tudo" />
+				<a href="" id="botao_pesquisar"><img src="<?php echo base_url('assets/img/botao_pesquisar.png') ?>" /></a>
 			</form>
 		</div>
 		<div id="div_botoes_home">
-			<a href="sala" id="botao_home_sala"> <img src="<?php echo base_url('assets/img/botao_livro.png') ?>"> </a>
-			<a href="onibus" id="botao_home_onibus"> <img src="<?php echo base_url('assets/img/botao_onibus.png') ?>"> </a>
-			<a href="lanchonete" id="botao_home_lanchonete"> <img src="<?php echo base_url('assets/img/botao_bolo.png') ?>"> </a>
-			<img src="<?php echo base_url('assets/img/bottom_line_opcoes.png') ?>">
+			<center>
+				<a href="sala" id="botao_home_sala"> <img src="<?php echo base_url('assets/img/botao_livro.png') ?>"> </a>
+				<a href="onibus" id="botao_home_onibus"> <img src="<?php echo base_url('assets/img/botao_onibus.png') ?>"> </a>
+				<a href="lanchonete" id="botao_home_lanchonete"> <img src="<?php echo base_url('assets/img/botao_bolo.png') ?>"> </a>
+				<img src="<?php echo base_url('assets/img/bottom_line_opcoes.png') ?>">
+			</center>
 		</div>
 	</div>
 	<div class="span8" id="map-canvas"></div>
 </div>
 <div class="row-fluid" id="destaques_screen">
 	<a href="#destaque1" id="botao_content"><img src="<?php echo base_url('assets/img/botao_content.png') ?>"></a>
-	<div class="span8 offset2">
+	<div class="span8" id="destaques_group">
 		<h1>LANCHONETES EM DESTAQUE</h1>
 		<div class="row-fluid" id="destaque1">
 			<div class="span4" id="title_destaque1" style="background-image: url('<?php echo base_url('assets/img/background_destaque.jpg') ?>')">
@@ -47,10 +51,26 @@
 </div>
 <div class="row-fluid" id="rodape">
 	<div class="span12">
-
+		<div style="float: left; margin-left: 12%;">
+			<b>Siga ExploreUnB no
+			<button class="btn btn-normal" type="button">
+				Twitter
+			</button></b>
+		</div>
+		<div style="float: right; margin-right: 12%;">
+			<iframe src="http://www.facebook.com/plugins/like.php?href=LINK&layout=standard&<br>
+			show_faces=false&width=380&action=like&colorscheme=light&height=25&locale=pt_BR" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:25px; float: right;" allowTransparency="true"></iframe>
+		</div>
+		<div id="line_rodape">
+			<img src="<?php echo base_url('assets/img/line_rodape.png') ?>"/>
+		</div>
 	</div>
 </div>
-
+<div id="bottom_rodape">
+	<center>
+		ExploreUnB <i>All rights reserved</i>.
+	</center>
+</div>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -93,8 +113,9 @@
 					lightness : 100
 				}, {
 					visibility : 'simplified'
-				},
-				{ weight: 0.5 }]
+				}, {
+					weight : 0.5
+				}]
 			}, {
 				featureType : 'poi.business',
 				elementType : 'all',

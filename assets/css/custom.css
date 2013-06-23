@@ -26,6 +26,10 @@ body, html {
 #side_home h1 {
 	position: relative;
 	top: 15%;
+	font-family: prime;
+	font-size: 27px;
+	text-align: center;
+	font-weight: bold;
 }
 
 #div_form_busca {
@@ -47,14 +51,15 @@ body, html {
 	box-shadow: none !important;
 }
 
+#botao_pesquisar {
+	position: relative;
+	top: -5px;
+	left: -35px;
+}
+
 #div_botoes_home {
 	position: relative;
 	top: 45%;
-}
-
-#div_botoes_home a {
-	width: 30%;
-	display: inline-block;
 }
 
 #botao_content {
@@ -64,9 +69,16 @@ body, html {
 	top: -55px;
 }
 
+#destaques_group {
+	float: none;
+	margin: auto;
+}
+
 #destaques_screen h1 {
+	text-align: center;
 	color: #001FCE;
 	margin-top: 50px;
+	font-family: code_bold;
 }
 
 #destaque1, #destaque2, #destaque3 {
@@ -74,7 +86,7 @@ body, html {
 	margin-bottom: 20px;
 }
 
-#title_destaque1, #title_destaque2, #title_destaque3{
+#title_destaque1, #title_destaque2, #title_destaque3 {
 	width: 25%;
 	height: 200px;
 	background-position: center;
@@ -98,3 +110,19 @@ body, html {
 	margin: 0px;
 }
 
+#rodape {
+	height: 150px;
+	padding-top: 100px;
+	background-color: #009200;
+	color: #FFF;
+}
+
+#line_rodape {
+	width: 80%;
+	margin-left: 10%;
+}
+
+#bottom_rodape {
+	background-color: #001fce;
+	color: #FFF;
+}
