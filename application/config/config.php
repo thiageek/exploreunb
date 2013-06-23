@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://www.thiageek.com.br/projetos/exploreunb/';
+$config['base_url']	= 'http://localhost/exploreunb/';
 
 /*
 |--------------------------------------------------------------------------

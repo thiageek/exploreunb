@@ -1,7 +1,100 @@
-/**
- * All your custom CSS should go into this file
- */
-
-body {
-   padding-top: 15px;
+body, html {
+	height: 100%;
 }
+
+*:focus {
+	outline: none;
+}
+
+#home_screen {
+	height: 100%;
+	width: 100%;
+}
+
+#map-canvas {
+	height: 100%;
+	width: 69.888%;
+	margin-left: 0.111%;
+	float: right;
+}
+
+#side_home {
+	height: 100%;
+	width: 30%
+}
+
+#side_home h1 {
+	position: relative;
+	top: 15%;
+}
+
+#div_form_busca {
+	position: relative;
+	top: 30%;
+}
+
+#campo_busca {
+	width: 80%;
+	margin-left: 8%;
+	background-color: transparent;
+	background-position: center center;
+	border: 0px;
+	color: #333;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+#div_botoes_home {
+	position: relative;
+	top: 45%;
+}
+
+#div_botoes_home a {
+	width: 30%;
+	display: inline-block;
+}
+
+#botao_content {
+	position: relative;
+	float: left;
+	left: 50px;
+	top: -55px;
+}
+
+#destaques_screen h1 {
+	color: #001FCE;
+	margin-top: 50px;
+}
+
+#destaque1, #destaque2, #destaque3 {
+	height: 200px;
+	margin-bottom: 20px;
+}
+
+#title_destaque1, #title_destaque2, #title_destaque3{
+	width: 25%;
+	height: 200px;
+	background-position: center;
+	background-size: 100% 100%;
+	margin: 0px;
+}
+
+#title_destaque1 p, #title_destaque2 p, #title_destaque3 p {
+	color: #001FCE;
+	width: 100%;
+	padding-top: 50px;
+	font-size: 19px;
+	text-align: center;
+}
+
+#img_destaque1, #img_destaque2, #img_destaque3 {
+	width: 74.899%;
+	height: 200px;
+	background-position: center;
+	background-size: 100% auto;
+	margin: 0px;
+}
+
