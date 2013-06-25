@@ -2,9 +2,10 @@
 	<form name='form_usuario' method="POST" action="<?php echo base_url()?>usuario/salvar">
 		<fieldset>
 			<legend>
-				Novo Usuario
+				<?php echo $op ?> Usuario
 			</legend>
-			<input name="id" type="hidden"/>
+			<input name="id" type="hidden" value="2"/>
+			<input name="op" type="hidden" value="<?php echo $op ?>"/>
 			<label>Nome:</label>
 			<input name="nome" type="text"/>
 			<label>Matricula:</label>
