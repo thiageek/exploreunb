@@ -30,7 +30,7 @@
 		<div class="row-fluid" id="destaque1">
 			<div class="span4" id="title_destaque1">
 				<p>
-					LANCHONETE MEGABOGA 1
+					Restaurante Universitário
 				</p>
 			</div>
 			<div class="span8" id="img_destaque1" style="background-image: url('<?php echo base_url('assets/img/destaque1.jpg') ?>')"></div>
@@ -40,14 +40,14 @@
 			<div class="span8" id="img_destaque2" style="background-image: url('<?php echo base_url('assets/img/destaque2.jpg') ?>')"></div>
 			<div class="span4" id="title_destaque3">
 				<p>
-					LANCHONETE MEGABOGA 2
+					Banca de guloseimas
 				</p>
 			</div>
 		</div>
 		<div class="row-fluid destaques" id="destaque3">
 			<div class="span4" id="title_destaque3">
 				<p>
-					LANCHONETE MEGABOGA 3
+					Faculdade do Lanche
 				</p>
 			</div>
 			<div class="span8" id="img_destaque3" style="background-image: url('<?php echo base_url('assets/img/destaque3.jpg') ?>')"></div>
