@@ -14,9 +14,9 @@
 		</div>
 		<div id="div_botoes_home">
 			<center>
-				<a href="sala" id="botao_home_sala"> <img src="<?php echo base_url('assets/img/botao_livro.png') ?>"> </a>
-				<a href="onibus" id="botao_home_onibus"> <img src="<?php echo base_url('assets/img/botao_onibus.png') ?>"> </a>
-				<a href="lanchonete" id="botao_home_lanchonete"> <img src="<?php echo base_url('assets/img/botao_bolo.png') ?>"> </a>
+				<a href="sala" id="botao_home_sala" title= "Sala"> <img src="<?php echo base_url('assets/img/botao_livro.png') ?>"> </a>
+				<a href="onibus" id="botao_home_onibus" title= "Linha de õnibos"> <img src="<?php echo base_url('assets/img/botao_onibus.png') ?>"> </a>
+				<a href="lanchonete" id="botao_home_lanchonete" title="Lanchonete"> <img src="<?php echo base_url('assets/img/botao_bolo.png') ?>"> </a>
 				<img src="<?php echo base_url('assets/img/bottom_line_opcoes.png') ?>">
 			</center>
 		</div>
