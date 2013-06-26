@@ -1,5 +1,9 @@
 <div class="row-fluid" id="home_screen">
 	<div class="span4" id='side_home' style="background-image: url('<?php echo base_url('assets/img/background_home.png') ?>')">
+		<div id="head_menu" style="background-image: url('<?php echo base_url('assets/img/botao_logar.png') ?>')">
+			<a href="#modal_login" id="link_logar" data-toggle="modal">ENTRAR</a>
+			<!--<a href="<?php echo base_url() . 'usario/novo'; ?>" id="link_logar">ENTRAR</a>-->
+		</div>
 		<h1>O QUE VOCÊ <span>PROCURA</span> ?</h1>
 		<div id="div_form_busca">
 			<form id="form_busca">
@@ -24,23 +28,24 @@
 	<div class="span8" id="destaques_group">
 		<h1>LANCHONETES EM DESTAQUE</h1>
 		<div class="row-fluid" id="destaque1">
-			<div class="span4" id="title_destaque1" style="background-image: url('<?php echo base_url('assets/img/background_destaque.jpg') ?>')">
+			<div class="span4" id="title_destaque1">
 				<p>
 					LANCHONETE MEGABOGA 1
 				</p>
 			</div>
 			<div class="span8" id="img_destaque1" style="background-image: url('<?php echo base_url('assets/img/destaque1.jpg') ?>')"></div>
 		</div>
+		
 		<div class="row-fluid destaques" id="destaque2">
 			<div class="span8" id="img_destaque2" style="background-image: url('<?php echo base_url('assets/img/destaque2.jpg') ?>')"></div>
-			<div class="span4" id="title_destaque3" style="background-image: url('<?php echo base_url('assets/img/background_destaque.jpg') ?>')">
+			<div class="span4" id="title_destaque3">
 				<p>
 					LANCHONETE MEGABOGA 2
 				</p>
 			</div>
 		</div>
 		<div class="row-fluid destaques" id="destaque3">
-			<div class="span4" id="title_destaque3" style="background-image: url('<?php echo base_url('assets/img/background_destaque.jpg') ?>')">
+			<div class="span4" id="title_destaque3">
 				<p>
 					LANCHONETE MEGABOGA 3
 				</p>
@@ -71,6 +76,90 @@
 		ExploreUnB <i>All rights reserved</i>.
 	</center>
 </div>
+
+<!-- Modal -->
+<div id="modal_login" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+			×
+		</button>
+		<h3 id="myModalLabel">Entrar</h3>
+	</div>
+	<div class="modal-body">
+		<div class="row-fluid">
+			<div class="span4">
+				<form name='form_logar' method="POST" action="<?php echo base_url()?>usuario/logar">
+					<legend>
+						Login
+					</legend>
+					  <div class="control-group">
+    <label class="control-label" for="inputEmail">Email</label>
+    <div class="controls">
+      <input type="text" id="inputEmail" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">Senha</label>
+    <div class="controls">
+      <input type="password" id="inputPassword" placeholder="Senha">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox"> Lembrar-me
+      </label>
+      <button type="submit" class="btn">Sign in</button>
+    </div>
+  </div>
+				</form>
+			</div>
+			<div class="span8">
+				<form name='form_cadastrar' method="POST" action="<?php echo base_url()?>usuario/salvar">
+					<legend>
+						Cadastrar
+					</legend>
+					<fieldset class="span4">
+						<input name="op" type="hidden" value="salvar"/>
+						<label>Nome:</label>
+						<input name="nome" type="text"/>
+						<label>Matricula:</label>
+						<input name="matricula" type="text"/>
+						<label>Curso:</label>
+						<select name="curso">
+							<option value="1">Computação</option>
+							<option value="2">Design Industrial</option>
+							<option value="3">Matematica</option>
+							<option value="4">Artes</option>
+						</select>
+					</fieldset>
+					<fieldset class="span4">
+						<label>Email:</label>
+						<input name="email" type="text"/>
+						<label>Senha:</label>
+						<input name="senha" type="password"/>
+						<label>Confirmar Senha:</label>
+						<input name="c_senha" type="password"/>
+						<div class="controls">
+							<button type="submit" class="btn">
+								Cadastrar
+							</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">
+			Close
+		</button>
+		<button class="btn btn-primary">
+			Save changes
+		</button>
+	</div>
+</div>
+
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
