@@ -33,24 +33,24 @@
 					Restaurante Universitário
 				</p>
 			</div>
-			<div class="span8" id="img_destaque1" style="background-image: url('<?php echo base_url('assets/img/destaque1.jpg') ?>')"></div>
+			<div class="span8" id="img_destaque1" style="background-image: url('<?php echo base_url('assets/img/RU.jpg') ?>')"></div>
 		</div>
 		
-		<div class="row-fluid destaques" id="destaque2">
-			<div class="span8" id="img_destaque2" style="background-image: url('<?php echo base_url('assets/img/destaque2.jpg') ?>')"></div>
-			<div class="span4" id="title_destaque3">
-				<p>
-					Banca de guloseimas
-				</p>
-			</div>
-		</div>
-		<div class="row-fluid destaques" id="destaque3">
-			<div class="span4" id="title_destaque3">
+		<div class="row-fluid" id="destaque2">
+			<div class="span8" id="img_destaque2" style="background-image: url('<?php echo base_url('assets/img/faculdadedolanche.jpg') ?>')"></div>
+			<div class="span4" id="title_destaque2">
 				<p>
 					Faculdade do Lanche
 				</p>
 			</div>
-			<div class="span8" id="img_destaque3" style="background-image: url('<?php echo base_url('assets/img/destaque3.jpg') ?>')"></div>
+		</div>
+		<div class="row-fluid" id="destaque3">
+			<div class="span4" id="title_destaque3">
+				<p>
+					Café das Letras
+				</p>
+			</div>
+			<div class="span8" id="img_destaque3" style="background-image: url('<?php echo base_url('assets/img/cafedasletras.jpg') ?>')"></div>
 		</div>
 	</div>
 </div>
