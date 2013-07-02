@@ -18,5 +18,4 @@ class Model_usuario extends CI_Model {
 		$this -> db -> where('id_usuario', $id);
 		return $this -> db -> update('tb_usuario', $data);
 	}
-
 }

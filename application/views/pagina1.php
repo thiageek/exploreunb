@@ -120,7 +120,7 @@
 						Cadastrar
 					</legend>
 					<fieldset class="span4">
-						<input name="op" type="hidden" value="salvar"/>
+						<input name="op" type="hidden" value="novo"/>
 						<label>Nome:</label>
 						<input name="nome" type="text"/>
 						<label>Matricula:</label>

@@ -1,25 +1,25 @@
 <?php
 if (!defined('BASEPATH'))
 	die();
-class Usuario extends Main_Controller {
+class Mapa extends Main_Controller {
 
 	function __construct() {
 		parent::__construct();
-		$this -> load -> model('model_usuario');
+		//$this -> load -> model('model_mapa');
 	}
-
-	public function index() {
+	
+	public function index(){
 		$this -> load -> view('include/header');
-		$this -> load -> view('pagina1');
+		$this -> load -> view('mapa/mapas');
 		$this -> load -> view('include/footer');
 	}
 
-	public function novo() {
-		$data['op'] = 'novo';
-		
-		$this -> load -> view('include/header');
+	public function pagina1() {
+		$this -> load -> view('mapa/mapa_pagina1');
+	}
+
+	public function lanchonete() {
 		$this -> load -> view('usuario/_form', $data);
-		$this -> load -> view('include/footer');
 	}
 	
 	public function editar() {
@@ -31,7 +31,7 @@ class Usuario extends Main_Controller {
 	}
 
 	public function salvar() {
-		$op = $this -> input -> post('op');
+		$op = $this -> input -> post('nome');
 		
 		$usuario['nome'] = $this -> input -> post('nome');
 		$usuario['matricula'] = $this -> input -> post('matricula');
@@ -39,7 +39,7 @@ class Usuario extends Main_Controller {
 		$usuario['email'] = $this -> input -> post('email');
 		$usuario['senha'] = $this -> input -> post('senha');
 		
-		if($op == 'novo'){
+		if($op == 'salvar'){
 			$this -> model_usuario -> salvar_usuario($usuario);
 		}else{
 			$id = $this -> input -> post('id');

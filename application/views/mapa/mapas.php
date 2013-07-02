@@ -1,0 +1,1 @@
+<a href="<?php base_url(); ?>mapa/pagina1">PAGINA1</a>

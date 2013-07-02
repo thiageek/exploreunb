@@ -4,7 +4,7 @@
 			<legend>
 				<?php echo $op ?> Usuario
 			</legend>
-			<input name="id" type="hidden" value="2"/>
+			
 			<input name="op" type="hidden" value="<?php echo $op ?>"/>
 			<label>Nome:</label>
 			<input name="nome" type="text"/>
