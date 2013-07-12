@@ -18,5 +18,18 @@ class Model_local extends CI_Model {
 		$this->db->where('id_local', $id);
 		return $this->db>update('tb_local',$data);
 	}
+	
+	function get_local($id)
+	{	
+		if($id == 'all'){
+			$query = $this->db->get('tb_local');
+			return $query->result_array(); 
+		}else{
+			$this->db->where('id_local', $id);
+			$query = $this->db->get('tb_local');
+			return $query->result();
+		}
+		
+	}
 
 }

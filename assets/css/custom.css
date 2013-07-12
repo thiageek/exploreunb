@@ -30,6 +30,13 @@ body, html {
 	float: right;
 }
 
+#map-canvas_search {
+	height: 100%;
+	width: 69.888%;
+	margin-left: 0.111%;
+	float: right;
+}
+
 
 #side_home {
 	height: 100%;
@@ -46,6 +53,13 @@ body, html {
 	padding: 20px;
 }
 
+#side_search {
+	height: 100%;
+	width: 30%;
+	background-position: center;
+	background-size: 100% auto;
+	padding: 10px;
+}
 
 #head_menu{
 	position: relative;
@@ -69,7 +83,7 @@ a#link_logar{
 	padding-right: 30%;
 }
 
-#side_home h1, #side_form h1 {
+#side_home h1, #side_form h1, #side_search h1{
 	position: relative;
 	top: 10%;
 	color: #DDD;
@@ -77,6 +91,7 @@ a#link_logar{
 	font-size: 27px;
 	text-align: center;
 	font-weight: bold;
+	text-transform: capitalize;
 }
 
 #div_form_busca {
@@ -179,4 +194,8 @@ a#link_logar{
 	width: 70%;
 	left: 15%;
 	margin: 0px;
+}
+
+#form_lanchonete label{
+	color: #DDD;
 }

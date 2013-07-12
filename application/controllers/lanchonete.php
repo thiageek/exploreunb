@@ -14,7 +14,10 @@ class Lanchonete extends Main_Controller {
 	}
 	
 	public function novo(){
-		$data['op'] = 'novo';
+		$this->load->model('model_local');
+		$data['locais'] = $this->model_local->get_local('all');
+		
+		$data['op'] = 'nova';
 		
 		$this->load->view('include/header');
       	$this->load->view('lanchonete/form', $data);
@@ -35,7 +38,7 @@ class Lanchonete extends Main_Controller {
 		$lanchonete['tb_local_id_local'] = $this->input->post('local');
 		$lanchonete['tb_coordenada_id_coordenada'] = $this->input->post('coordenada');
 		
-		if($op == 'novo'){
+		if($op == 'nova'){
 			$this->model_lanchonete->salvar_lanchonete($lanchonete);
 		}else{
 			$id = $this->input->post('id');
@@ -44,6 +47,26 @@ class Lanchonete extends Main_Controller {
 		
 		$this->load->view('include/header');
         $this->load->view('lanchonete/index');
+        $this->load->view('include/footer');
+	}
+	
+	public function pesquisar_nome($lanchonete){
+		
+	}
+	
+	public function pesquisar(){
+		
+		$this->load->model('model_local');
+		$data['locais'] = $this->model_local->get_local('all');
+		
+		session_start();
+		if(isset($_SESSION['lanchonete'])){
+			$data['objeto'] = $_SESSION['lanchonete'];
+			session_destroy();
+		}
+		
+		$this->load->view('include/header');
+        $this->load->view('lanchonete/pesquisar', $data);
         $this->load->view('include/footer');
 	}
    

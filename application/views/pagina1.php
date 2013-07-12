@@ -6,17 +6,18 @@
 		</div>
 		<h1>O QUE VOCÊ <span>PROCURA</span> ?</h1>
 		<div id="div_form_busca">
-			<form id="form_busca">
-				<input type="text" name="busca" id="campo_busca" placeholder="Salas, Onibus, Lanchonetes ..." style="background-image: url('<?php echo base_url('assets/img/barra_pesquisa.jpg') ?>')"/>
-				<input type="hidden" name="opcao" value="tudo" />
+			<form id="form_busca" method="POST" action="<?php echo base_url()?>explorer/pesquisar">
+				<input type="text" name="objeto" id="campo_busca" placeholder="Salas, Onibus, Lanchonetes ..." style="background-image: url('<?php echo base_url('assets/img/barra_pesquisa.jpg') ?>')"/>
+				<input type="hidden" name="opcao" id="opcao" value="tudo"/>
+				<input type="hidden" name="origem" id="explorer" value="tudo"/>
 				<a href="" id="botao_pesquisar"><img src="<?php echo base_url('assets/img/botao_pesquisar.png') ?>" /></a>
 			</form>
 		</div>
 		<div id="div_botoes_home">
 			<center>
-				<a href="sala" id="botao_home_sala" title= "Sala"> <img src="<?php echo base_url('assets/img/botao_livro.png') ?>"> </a>
-				<a href="onibus" id="botao_home_onibus" title= "Linha de õnibos"> <img src="<?php echo base_url('assets/img/botao_onibus.png') ?>"> </a>
-				<a href="lanchonete" id="botao_home_lanchonete" title="Lanchonete"> <img src="<?php echo base_url('assets/img/botao_bolo.png') ?>"> </a>
+				<a id="botao_home_sala" title= "Sala"> <img src="<?php echo base_url('assets/img/botao_livro.png') ?>"> </a>
+				<a id="botao_home_onibus" title= "Linha de õnibos"> <img src="<?php echo base_url('assets/img/botao_onibus.png') ?>"> </a>
+				<a id="botao_home_lanchonete" title="Lanchonete"> <img src="<?php echo base_url('assets/img/botao_bolo.png') ?>"> </a>
 				<img src="<?php echo base_url('assets/img/bottom_line_opcoes.png') ?>">
 			</center>
 		</div>
@@ -311,5 +312,13 @@
 
 
 		google.maps.event.addDomListener(window, 'load', initialize);
+	}); 
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#botao_home_lanchonete').click(function(){
+			$('#opcao').val('lanchonete');
+			$('#form_busca').submit();
+		});
 	}); 
 </script>

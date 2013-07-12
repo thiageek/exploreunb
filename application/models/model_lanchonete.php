@@ -18,5 +18,17 @@ class Model_lanchonete extends CI_Model {
 		$this->db->where('id_lanchonete', $id);
 		return $this->db>update('tb_lanchonete',$data);
 	}
+	
+	function get_lanchonete_nome($nome)
+	{	
+		if($nome == 'all'){
+			$query = $this->db->get('tb_lanchonete');
+			return $query->result_array(); 
+		}else{
+			$this->db->where('id_local', $id);
+			$query = $this->db->get('tb_local');
+			return $query->result();
+		}	
+	}
 
 }
