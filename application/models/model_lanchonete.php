@@ -19,15 +19,21 @@ class Model_lanchonete extends CI_Model {
 		return $this->db>update('tb_lanchonete',$data);
 	}
 	
-	function get_lanchonete_nome($nome)
+	function get_lanchonete($nome)
 	{	
 		if($nome == 'all'){
-			$query = $this->db->get('tb_lanchonete');
+			$this->db->select('*');
+			$this->db->from('tb_lanchonete');
+			$this->db->join('tb_coordenada', 'tb_lanchonete.id_coordenada = tb_coordenada.id_coordenada');
+			$query = $this->db->get();
 			return $query->result_array(); 
 		}else{
-			$this->db->where('id_local', $id);
-			$query = $this->db->get('tb_local');
-			return $query->result();
+			$this->db->like('lanchonete', $nome);
+			$this->db->select('*');
+			$this->db->from('tb_lanchonete');
+			$this->db->join('tb_coordenada', 'tb_lanchonete.id_coordenada = tb_coordenada.id_coordenada');
+			$query = $this->db->get();
+			return $query->result_array();
 		}	
 	}
 

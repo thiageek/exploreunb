@@ -6,21 +6,21 @@
 					<h1>Pesquisar Lanchonete</h1>
 				</legend>
 				<label>Por Nome:</label>
-				<input name="nome" type="text" class="span12"/>
+				<input name="lanchonete" type="text" class="span12"/>
 				<label>Por Local:</label>
 				<select name="local" class="span12">
+					<option> </option>
 					<?php foreach ($locais as $local) {
 						echo '<option value="' . $local['id_local'] . '">' . $local['local'] . '</option>';
 					} ?>
 				</select>
 				<div class="controls">
 					<button type="submit" class="btn">
-						Cadastrar
+						Pesquisar
 					</button>
 				</div>
 			</fieldset>
 		</form>
-		<?php echo $objeto; ?>
 	</div>
 	<div class="span8" id="map-canvas_search"></div>
 </div>
@@ -28,8 +28,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script type="text/javascript">
 	var map;
-	var marker;
-	var p = 0;
 	function initialize() {
 		var myLatlng = new google.maps.LatLng(-15.763, -47.868466);
 	  	var mapOptions = {
@@ -39,24 +37,36 @@
 	  	};
 	  	map = new google.maps.Map(document.getElementById('map-canvas_search'),
 	    	mapOptions);
-	      
-	  	google.maps.event.addListener(map, 'click', function(event) {
-    		placeMarker(event.latLng);
-  	  	});
-	}
-		
-	function placeMarker(location) {
-		if(p == 1){
-			maker.setMap(null);
-		}
-		maker = new google.maps.Marker({
-	      		position: location,
-	      		map: map
-	  	});
-	  	$('#coordenada').val(location);
-	  	p = 1;
-	  	
-  	}
-	
-	google.maps.event.addDomListener(window, 'load', initialize);
+	    	
+	    var lanchs = new Array();
+    		
+	    <?php if(isset($lanchonetes)){
+	    	$i = 0;
+			foreach ($lanchonetes as $lanchonete) {
+				echo 'var t =  new Object();'."\n";
+				echo 't.name = "'.$lanchonete['lanchonete'].'"'."\n";
+				echo 't.lat = '.$lanchonete['lat']."\n";
+				echo 't.lng = '.$lanchonete['lng']."\n";
+				echo 'lanchs['.$i.'] = t; '."\n\n";
+				$i++;
+			}
+			
+			echo 'for (var i = 0; i < lanchs.length; i++) {'."\n";
+        	echo 'var latlng = new google.maps.LatLng(lanchs[i].lat, lanchs[i].lng);'."\n";
+        	echo 'map.addMarker(createMarker(lanchs[i].name,latlng));'."\n";
+        	echo '}'."\n\n\n";
+								
+     
+		    echo 'function createMarker(name, latlng) {'."\n";
+			echo 'var marker = new google.maps.Marker({position: latlng, map: map});'."\n";
+			echo 'google.maps.event.addListener(marker, "click", function() {'."\n";
+			echo 'if (infowindow) infowindow.close();'."\n";
+			echo 'infowindow = new google.maps.InfoWindow({content: name});'."\n";
+			echo 'infowindow.open(map, marker);'."\n";
+		    echo '});'."\n";
+		    echo 'return marker;'."\n";
+		  	echo '}'."\n";
+	} ?>
+}		
+google.maps.event.addDomListener(window, 'load', initialize);
 </script>
