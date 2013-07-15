@@ -1,3 +1,12 @@
+/* Bootstrap Css Map Fix*/
+body #map-canvas_search img { 
+  max-width: none;
+}
+/* Bootstrap Css Map Fix*/
+body #map-canvas_search label { 
+  width: auto; display:inline; 
+}
+
 body, html {
 	height: 100%;
 }
