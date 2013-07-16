@@ -208,3 +208,23 @@ a#link_logar{
 #form_lanchonete label{
 	color: #DDD;
 }
+
+.results{
+	padding: 2px;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: #DDD;
+	border-top: 1px solid #DDD;
+}
+
+.results:hover{
+	background-color: rgba(125, 125, 125, 0.4);
+}
+
+.results h3{
+	margin: 0px;
+}
+
+.results:hover h3{
+	margin: 0px;
+	background-color: rgba(125, 125, 125, 0.4);
+}

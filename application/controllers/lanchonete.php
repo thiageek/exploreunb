@@ -55,9 +55,9 @@ class Lanchonete extends Main_Controller {
 	}
 	
 	public function pesquisar(){
-		
+		$this->load->model('model_local');
 		$this->load->model('model_lanchonete');
-		
+		$data['locais'] = $this->model_local->get_local('all');
 		
 		session_start();
 		if(isset($_SESSION['lanchonete'])){

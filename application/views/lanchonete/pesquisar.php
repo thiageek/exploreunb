@@ -21,6 +21,16 @@
 				</div>
 			</fieldset>
 		</form>
+		<div class="row-fluid">
+			<?php if(isset($lanchonetes)){
+				foreach ($lanchonetes as $lanchonete) {
+					echo '<div class="results" id="'.$lanchonete['lanchonete'].'">'."\n";
+					echo '<h3>'.$lanchonete['lanchonete'].'</h3>'."\n";
+					echo '<p><b>Descrição da lanchonete</b>, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ligula odio, placerat nec nisl a, lacinia tempor nulla.</p>'."\n";
+					echo '</div>'."\n";				
+				}
+			} ?>
+		</div>
 	</div>
 	<div class="span8" id="map-canvas_search"></div>
 </div>
